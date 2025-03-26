@@ -4,7 +4,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 import nltk
 from flask_cors import CORS
 from transformers import pipeline
-
+import os
 # Download sentiment lexicon
 nltk.download('vader_lexicon')
 

@@ -12,14 +12,14 @@ const Horoscope = () => {
         setLoading(true);
         setHoroscope(null);
         setError("");
-    
+
         try {
             const response = await axios.get("https://horoscope-app-r9ua.onrender.com/horoscope");
             console.log("API Response:", response.data);  // Debugging log
-    
+
             // Filter the correct horoscope based on the selected sign
             const selectedHoroscope = response.data.find(h => h.sign.toLowerCase() === sign.toLowerCase());
-    
+
             if (selectedHoroscope) {
                 setHoroscope(selectedHoroscope);
             } else {
@@ -32,8 +32,7 @@ const Horoscope = () => {
             setLoading(false);
         }
     };
-    
-    
+
     const saveToFavorites = () => {
         if (horoscope) {
             const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
