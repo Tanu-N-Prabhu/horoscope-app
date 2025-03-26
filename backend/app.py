@@ -8,8 +8,11 @@ import os
 # Download sentiment lexicon
 nltk.download('vader_lexicon')
 
+
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+
+# Allow CORS for specific origin (your Netlify app URL)
+CORS(app, origins=["https://67e39bb0b3d7a300081ffec5--ai-horoscope-app.netlify.app"])
 
 # Initialize SentimentIntensityAnalyzer
 sia = SentimentIntensityAnalyzer()
