@@ -14,7 +14,7 @@ const Horoscope = () => {
         setError("");
     
         try {
-            const response = await axios.get("http://127.0.0.1:5000/horoscope");
+            const response = await axios.get("https://horoscope-app-r9ua.onrender.com/horoscope");
             console.log("API Response:", response.data);  // Debugging log
     
             // Filter the correct horoscope based on the selected sign
