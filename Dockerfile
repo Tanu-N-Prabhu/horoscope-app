@@ -18,4 +18,4 @@ ENV FLASK_APP=backend/app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 # Run the application
-CMD ["python", "backend/app.py"]
+CMD ["python3", "backend/app.py"]
