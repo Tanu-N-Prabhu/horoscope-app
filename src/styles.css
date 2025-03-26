@@ -1,0 +1,99 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+}
+
+/* Container Styling */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Maximum width for larger screens */
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Select Dropdown Styling */
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Text Styling */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Error Styling */
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller font for mobile devices */
+    }
+
+    select, button {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjusting paragraph size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; /* Even smaller for very small screens */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    select, button {
+        font-size: 0.9rem; /* Smaller font for mobile screens */
+    }
+
+    p {
+        font-size: 0.8rem; /* Adjust paragraph size even further */
+    }
+}
