@@ -1,5 +1,27 @@
 {
     "version": 2,
-    "builds": [{ "src": "backend/app.py", "use": "@vercel/python" }],
-    "routes": [{ "src": "/api/(.*)", "dest": "backend/app.py" }]
-  }  
+    "builds": [
+      {
+        "src": "backend/app.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxDuration": 10
+        }
+      },
+      {
+        "src": "src/package.json",  
+        "use": "@vercel/react"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/horoscope",
+        "dest": "/backend/app.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/src/$1"
+      }
+    ]
+  }
+  
