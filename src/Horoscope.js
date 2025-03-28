@@ -8,7 +8,7 @@ const Horoscope = () => {
 
     const fetchHoroscope = async () => {
         try {
-            const response = await axios.get(`https://horoscope-app-rkw9.vercel.app/horoscope?sign=${sign}`);
+            const response = await axios.get(`/api/horoscope?sign=${sign}`);
             // Access the first item of the array and update the state with it
             const data = response.data[0]; // Since it's an array with one object
             setHoroscope(data);
